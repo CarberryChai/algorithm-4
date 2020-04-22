@@ -5,11 +5,8 @@ public class Task_1_3 {
         int x = parse(args[0]);
         int y = parse(args[1]);
         int z = parse(args[2]);
-        if (x == y && y == z) {
-            System.out.println("equal!");
-        } else {
-            System.out.println("not equal!");
-        }
+        if (x == y && y == z) System.out.println("equal!");
+        else System.out.println("not equal!");
     }
 
     public static int parse(String x) {
