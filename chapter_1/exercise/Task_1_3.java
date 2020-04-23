@@ -37,6 +37,14 @@ public class Task_1_3 {
             s.insert(0, list.get(n % weight));
         }
         System.out.println(s.toString());
+
+        // 1.11
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 
     public static int parse(String x) {
