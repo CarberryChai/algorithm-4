@@ -27,6 +27,6 @@ public class Accumulator {
     public String toString() {
         return "Mean ( " +
                 times + " values ) : " +
-                this.mean();
+              String.format("%7.5f",  this.mean());
     }
 }
