@@ -12,7 +12,7 @@ public class Stack<T> implements Iterable<T> {
     }
 
     public static void main(String[] args) {
-       String s = "()";
+        String s = "()";
         System.out.println(s.charAt(0) == s.charAt(1));
     }
 
@@ -34,6 +34,10 @@ public class Stack<T> implements Iterable<T> {
             temp[i] = a[i];
         }
         this.a = temp;
+    }
+
+    public T peek() {
+        return this.a[N - 1];
     }
 
     public void push(T s) {
