@@ -1,5 +1,8 @@
 package chapter_1.main;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+
 public class MyString {
     public static boolean isPalindrome(String s) {
         int N = s.length();
@@ -9,8 +12,8 @@ public class MyString {
         return true;
     }
 
-    public static void main(String[] args) {
-        String a = "abcdcba";
+    public static void main(String[] args) throws Exception {
+       /* String a = "abcdcba";
         String b = "abcdefg";
         System.out.println(isPalindrome(a));
         System.out.println(isPalindrome(b));
@@ -18,7 +21,14 @@ public class MyString {
         System.out.println(isSorted(a));
         System.out.println(isSorted(b));
         System.out.println("**********************************************");
-        System.out.println(reverse(a).equals(a));
+        System.out.println(reverse(a).equals(a));*/
+        ArrayList arrayList = new ArrayList<>();
+       arrayList.add(123);
+       arrayList.add("hello");
+       arrayList.add(true);
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println(arrayList.get(i));
+        }
     }
 
     public static boolean isSorted(String s) {
@@ -30,11 +40,12 @@ public class MyString {
         }
         return true;
     }
-    public static String reverse(String s){
+
+    public static String reverse(String s) {
         int N = s.length();
         if (N <= 1) return s;
-        String a = s.substring(0, N/2);
-        String b = s.substring(N/2, N);
+        String a = s.substring(0, N / 2);
+        String b = s.substring(N / 2, N);
         return reverse(b) + reverse(a);
     }
 }

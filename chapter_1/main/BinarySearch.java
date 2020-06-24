@@ -39,7 +39,7 @@ public class BinarySearch {
         return -1;
     }
 
-    public static int rank(int key, int[] arr, int lo, int hi) {
+    private static int rank(int key, int[] arr, int lo, int hi) {
         if (lo > hi)
             return -1;
         int mid = lo + (hi - lo) / 2;
