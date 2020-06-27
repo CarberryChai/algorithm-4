@@ -1,5 +1,7 @@
 package chapter_1.exercise;
 
+import java.util.Arrays;
+
 public class Counter {
     private String name;
     private int total;
@@ -9,8 +11,11 @@ public class Counter {
     }
 
     public static void main(String[] args) {
-        Counter c = new Counter("one");
-        System.out.println(c);
+        int[] arr = new int[10];
+        for (int i = 0; i < 10; i++) {
+            arr[i] = i;
+        }
+        System.out.println(Arrays.binarySearch(arr, 90));
     }
 
     public void increase() {

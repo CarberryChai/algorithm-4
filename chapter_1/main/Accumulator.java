@@ -5,13 +5,16 @@ import edu.princeton.cs.algs4.StdRandom;
 public class Accumulator {
     private int times;
     private double total;
+
     public Accumulator() {
     }
-    public void addDataValue(double val){
+
+    public void addDataValue(double val) {
         this.total += val;
         this.times++;
     }
-    public double mean(){
+
+    public double mean() {
         return this.total / this.times;
     }
 
@@ -22,11 +25,11 @@ public class Accumulator {
             acc.addDataValue(StdRandom.uniform());
         }
         System.out.println(acc);
+        System.out.println("hello");
     }
+
     @Override
     public String toString() {
-        return "Mean ( " +
-                times + " values ) : " +
-              String.format("%7.5f",  this.mean());
+        return "Mean ( " + times + " values ) : " + String.format("%7.5f", this.mean());
     }
 }

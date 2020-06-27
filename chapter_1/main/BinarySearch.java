@@ -8,22 +8,25 @@ import java.util.Scanner;
 
 public class BinarySearch {
     public static void main(String[] args) throws FileNotFoundException {
+        // 启动设置里 把Program arguments 设置为largeW.txt largeT.txt或者tintW.text tinyT.txt
+        // 把默认的System.in设置为文件流
         System.setIn(new FileInputStream(args[0])); // System.in 为final
         int[] whitelist = StdIn.readAllInts();
         Arrays.sort(whitelist);
         Scanner scanner = new Scanner(new FileInputStream(args[1]));
         while (scanner.hasNext()) {
             int key = scanner.nextInt();
-            /*
-             * if (indexOf(key, whitelist) < 0) { System.out.println(key); }
-             */
-            if (rank(key, whitelist, 0, whitelist.length - 1) < 0) {
+            if (indexOf(key, whitelist) < 0) {
                 System.out.println(key);
             }
+
+            /*if (rank(key, whitelist, 0, whitelist.length - 1) < 0) {
+                System.out.println(key);
+            }*/
         }
         scanner.close();
     }
-
+    // 二分查找
     public static int indexOf(int key, int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -38,7 +41,7 @@ public class BinarySearch {
         }
         return -1;
     }
-
+    // 递归
     private static int rank(int key, int[] arr, int lo, int hi) {
         if (lo > hi)
             return -1;
